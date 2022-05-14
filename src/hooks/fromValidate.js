@@ -9,11 +9,7 @@ const FormValidate = (callback) => {
   const validate = (e, name, value) => {
     switch (name) {
       case "email":
-        if (
-          !new RegExp(
-            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-          ).test(value)
-        ) {
+        if (!new RegExp("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$").test(value)) {
           setErrors({
             ...errors,
             email: "enter a valid email address",
@@ -77,6 +73,8 @@ const FormValidate = (callback) => {
           let newObj = omit(errors, "phNumber");
           setErrors(newObj);
         }
+        break;
+      default:
         break;
     }
   };
