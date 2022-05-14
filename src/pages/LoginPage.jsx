@@ -1,7 +1,6 @@
 import LStyle from "../styles/LoginStyles.module.scss";
 import formValidate from "../hooks/fromValidate";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 const LoginPage = () => {
   const navigate = useNavigate();
 
@@ -22,7 +21,7 @@ const LoginPage = () => {
         <div className={LStyle.box1__imgDiv}>
           <img
             src="https://mydash.report/static/media/date-range.e19fcc46.webp"
-            alt="image"
+            alt="dashboard"
           />
         </div>
         <div className={LStyle.box1__infoDiv}>

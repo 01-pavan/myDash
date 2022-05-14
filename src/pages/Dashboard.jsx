@@ -1,8 +1,7 @@
 import DStyle from "../styles/DashboardStyles.module.scss";
-import * as d3 from "d3";
+
 import BarChart from "../components/BarChart";
-import { sampleData as sample, employees } from "../data/sampleData";
-import { useEffect } from "react";
+import { sampleData as sample } from "../data/sampleData";
 
 const Dashboard = () => {
   function randomIntFun() {
