@@ -5,6 +5,7 @@ import "../styles/ChartStyles.css";
 const BarChart = ({ data }) => {
   const sample = data[1];
   const { title, y_axis, year } = data[0];
+  console.log(title);
 
   const ref = useD3((svg) => {
     const margin = 80;
