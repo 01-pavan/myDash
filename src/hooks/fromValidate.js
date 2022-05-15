@@ -94,7 +94,6 @@ const FormValidate = (callback) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("form length", formData.length);
     if (
       Object.keys(errors).length === 0 &&
       Object.keys(formData).length !== 0

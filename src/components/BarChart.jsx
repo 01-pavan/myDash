@@ -2,7 +2,10 @@ import React from "react";
 import * as d3 from "d3";
 import { useD3 } from "../hooks/useD3";
 import "../styles/ChartStyles.css";
-const BarChart = ({ data: sample }) => {
+const BarChart = ({ data }) => {
+  const sample = data[1];
+  const { title, y_axis } = data[0];
+  // console.log(title);
   const year = 2021;
   const ref = useD3((svg) => {
     const margin = 80;
@@ -56,7 +59,6 @@ const BarChart = ({ data: sample }) => {
       .attr("width", xScale.bandwidth())
       .on("mouseenter", function (actual, i) {
         d3.selectAll(".value").attr("opacity", 0);
-
         //displaying percentage
         barGroups
           .append("text")
@@ -93,7 +95,7 @@ const BarChart = ({ data: sample }) => {
       .attr("y", margin / 2.4)
       .attr("transform", "rotate(-90)")
       .attr("text-anchor", "middle")
-      .text("Used (%)");
+      .text(`${y_axis} (%)`);
 
     svg
       .append("text")
@@ -109,7 +111,7 @@ const BarChart = ({ data: sample }) => {
       .attr("x", width / 2 + margin)
       .attr("y", 40)
       .attr("text-anchor", "middle")
-      .text(`Most used programming languages as of ${year}`);
+      .text(`${title}`);
 
     svg
       .append("text")
