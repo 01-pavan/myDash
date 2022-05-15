@@ -4,9 +4,8 @@ import { useD3 } from "../hooks/useD3";
 import "../styles/ChartStyles.css";
 const BarChart = ({ data }) => {
   const sample = data[1];
-  const { title, y_axis } = data[0];
-  // console.log(title);
-  const year = 2021;
+  const { title, y_axis, year } = data[0];
+
   const ref = useD3((svg) => {
     const margin = 80;
     const width = 1000 - 2 * margin;

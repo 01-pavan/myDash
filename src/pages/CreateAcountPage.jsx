@@ -1,7 +1,8 @@
 import style from "../styles/styles.module.scss";
 import formValidate from "../hooks/fromValidate";
 import { useNavigate } from "react-router-dom";
-const LoginPage = () => {
+import backgroudImg from "../images/pic1.webp";
+const CreateAccountPage = () => {
   const navigate = useNavigate();
 
   //it is called after validation
@@ -19,10 +20,7 @@ const LoginPage = () => {
     <div className={style.container}>
       <div className={style.container__box1}>
         <div className={style.box1__imgDiv}>
-          <img
-            src="https://mydash.report/static/media/date-range.e19fcc46.webp"
-            alt="dashboard"
-          />
+          <img src={backgroudImg} alt="dashboard" />
         </div>
         <div className={style.box1__infoDiv}>
           <h3>Choose a date range</h3>
@@ -98,4 +96,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default CreateAccountPage;

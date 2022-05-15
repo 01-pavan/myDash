@@ -98,6 +98,7 @@ const FormValidate = (callback) => {
       Object.keys(errors).length === 0 &&
       Object.keys(formData).length !== 0
     ) {
+      //calling after validation
       callback();
     } else {
       alert("Please enter all details");

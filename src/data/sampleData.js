@@ -1,8 +1,9 @@
 export let sampleData = [
   [
     {
-      title: "Most Loved Programming Languages as of 2021 ❤️❤️",
+      title: "Most Loved Programming Languages in  2021 ❤️❤️",
       y_axis: "loved",
+      year: 2021,
     },
 
     [
@@ -53,6 +54,7 @@ export let sampleData = [
     {
       title: "Most Used Programming Languages as of 2021 💻💻",
       y_axis: "Used",
+      year: 2021,
     },
 
     [
@@ -102,6 +104,7 @@ export let sampleData = [
     {
       title: "Most Popular Programming Languages as of 2015 🚀🚀",
       y_axis: "Popular",
+      year: 2015,
     },
 
     [
@@ -151,6 +154,7 @@ export let sampleData = [
     {
       title: "Most Popular Programming Languages as of 2016 🚀🚀",
       y_axis: "Popular",
+      year: 2016,
     },
 
     [
@@ -175,7 +179,7 @@ export let sampleData = [
         value: 20.55,
       },
       {
-        language: "Python#",
+        language: "Python",
         value: 17.89,
       },
       {
@@ -193,6 +197,60 @@ export let sampleData = [
       {
         language: "Ada",
         value: 5.54,
+      },
+    ],
+  ],
+
+  [
+    {
+      title: "Most Popular Programming Languages as of 2018 🚀🚀",
+      y_axis: "Popular",
+      year: 2018,
+    },
+
+    [
+      {
+        language: "JavaScript",
+        value: 53.35,
+      },
+      {
+        language: "HTML/CSS",
+        value: 52.78,
+      },
+
+      {
+        language: "SQL",
+        value: 50.74,
+      },
+      {
+        language: "C#",
+        value: 24.13,
+      },
+
+      {
+        language: "Python",
+        value: 23.85,
+      },
+      {
+        language: "Java",
+        value: 22.55,
+      },
+      {
+        language: "PHP",
+        value: 21.19,
+      },
+
+      {
+        language: "C++",
+        value: 17.78,
+      },
+      {
+        language: "C",
+        value: 15.21,
+      },
+      {
+        language: "Fortran",
+        value: 6.39,
       },
     ],
   ],
