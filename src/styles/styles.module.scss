@@ -1,0 +1,140 @@
+//mixins
+@use "./config/mixins" as mixin;
+
+//importing colors from config folder
+@import "./config/colors";
+
+.container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+
+  &__box1 {
+    flex: 1 1 50rem;
+    background-color: $light-grey;
+    @include mixin.flex(column);
+    padding: 10rem;
+    .box1__imgDiv {
+      width: auto;
+      height: auto;
+
+      & img {
+        object-fit: contain;
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .box1__infoDiv {
+      width: 25rem;
+      @include mixin.flex(column);
+      & h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        color: $font-primary;
+        margin-bottom: 1rem;
+      }
+      & p {
+        text-align: center;
+        color: $font-secondary;
+      }
+    }
+
+    &:hover {
+      box-shadow: -8px 7px 7px -3px rgba(184, 180, 184, 1);
+    }
+  }
+  .container__box2 {
+    flex: 1 1 50rem;
+    padding: 50px 10px 50px 60px;
+    background-color: white;
+    padding: 6rem;
+    .box2__loginForm {
+      width: 100%;
+      height: 100%;
+      & h1 {
+        margin-bottom: 3rem;
+        color: $font-primary;
+      }
+      .loginForm__inputDiv {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+        & label {
+          text-align: left;
+          display: block;
+          color: #434343;
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+        & input {
+          width: 80%;
+          min-width: 30rem;
+          padding: 10px;
+          border: 1px solid #818181;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          font-size: 1.5rem;
+          color: $font-secondary;
+        }
+        & h3 {
+          color: $error-color;
+        }
+      }
+      .loginForm__checkboxDiv {
+        @include mixin.align-center;
+        & input {
+          width: 1.6rem;
+          height: 1.6rem;
+          margin-right: 2rem;
+        }
+
+        & label {
+          font-size: 1.2rem;
+          font-weight: bolder;
+          color: $font-secondary;
+        }
+      }
+      & button {
+        margin-top: 3rem;
+        padding: 0.8rem 3rem;
+        background-color: $btn-color;
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 3px 1px -2px #ccc, 0 2px 2px 0 #ccc, 0 1px 5px 0 #ccc;
+        transition: all 0.3s ease;
+        &:active {
+          box-shadow: 0 4px 2px -3px #ccc, 0 4px 5px 1px #ccc,
+            0 2px 7px 1px #ccc;
+        }
+      }
+    }
+    &:hover {
+      box-shadow: 6px 4px 7px -3px rgba(184, 180, 184, 1);
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container__box1 {
+    display: none;
+  }
+}
+
+.dash_container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background-color: #2f4a6d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
