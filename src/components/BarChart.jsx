@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import { useD3 } from "../hooks/useD3";
 import "../styles/ChartStyles.css";
 const BarChart = ({ data }) => {
+  console.log(window.innerWidth);
   const sample = data[1];
   const { title, y_axis, year } = data[0];
   console.log(title);

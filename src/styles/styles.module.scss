@@ -6,6 +6,7 @@
 
 .container {
   max-width: 1440px;
+  // min-height: 100%;
   flex-grow: 1;
   border-radius: 0.5rem;
   display: flex;
@@ -53,6 +54,7 @@
   .container__box2 {
     flex: 1 1 100%;
     min-height: 100%;
+    // min-width: 100%;
     background-color: white;
     padding: 4rem 2rem;
     border-radius: 1rem;
@@ -83,7 +85,7 @@
       .loginForm__inputDiv {
         width: 100%;
         @include mixin.flex(column);
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         @include mixin.tablet-up {
           align-items: start;
         }
@@ -99,16 +101,18 @@
           }
         }
         & input {
-          width: 80%;
+          width: 100%;
           max-width: 40rem;
           text-align: center;
-          min-width: 30rem;
           padding: 10px;
           border: 1px solid #818181;
           border-radius: 5px;
           margin-bottom: 10px;
           font-size: 1.5rem;
           color: $font-secondary;
+          @include mixin.tablet-up {
+            text-align: left;
+          }
         }
         & h3 {
           color: $error-color;
@@ -153,7 +157,7 @@
 }
 
 .dash_container {
-  width: 100%;
+  min-width: 1440px;
   height: 100vh;
   margin: auto;
   background-color: #2f4a6d;

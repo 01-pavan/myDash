@@ -1,3 +1,4 @@
+@use "./config/mixins" as mixin;
 * {
   margin: 0;
   padding: 0;
@@ -9,11 +10,13 @@ html {
 }
 
 .container {
-  min-width: 390px;
+  min-width: 364px;
   min-height: 100vh;
-  padding: 1.5rem;
-  // margin: 0 auto;
+  padding: 4rem 1.5rem;
   background-color: #dfdfdf;
   display: flex;
   flex-direction: column;
+  @include mixin.tablet-up {
+    padding: 1.5rem;
+  }
 }
