@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import * as d3 from "d3";
 import { useD3 } from "../hooks/useD3";
 import "../styles/ChartStyles.css";
 const BarChart = ({ data }) => {
-  // useEffect(() => {
-  //   draw();
-  // }, []);
   const sample = data[1];
   const { title, y_axis, year } = data[0];
   console.log(title);
@@ -14,9 +11,7 @@ const BarChart = ({ data }) => {
     const margin = 80;
     const width = 1000 - 2 * margin;
     const height = 600 - 2 * margin;
-    function draw() {
-      console.log("invoked");
-    }
+
     const chart = svg
       .append("g")
       .attr("transform", `translate(${margin}, ${margin})`);
