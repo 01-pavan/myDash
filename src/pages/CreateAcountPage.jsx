@@ -31,66 +31,68 @@ const CreateAccountPage = () => {
         </div>
       </div>
       <div className={style.container__box2}>
-        <div className={style.box2__loginForm}>
-          <h1>Create an account</h1>
-          <form onSubmit={handleSubmit} autoComplete="off">
-            <div className={style.loginForm__inputDiv}>
-              <label>Your email address</label>
-              <input
-                type="text"
-                name="email"
-                defaultValue={email}
-                onChange={handleChange}
-              />
-              {errors.email && <h3>{errors.email}</h3>}
-            </div>
-            <div className={style.loginForm__inputDiv}>
-              <label>Your Password</label>
-              <input
-                type="password"
-                name="password"
-                defaultValue={password}
-                onChange={handleChange}
-              />
-              {errors.password && <h3>{errors.password}</h3>}
-            </div>
-            <div className={style.loginForm__inputDiv}>
-              <label>Confirm Your Password</label>
-              <input
-                type="password"
-                name="confirmPassword"
-                defaultValue={confirmPassword}
-                onChange={handleChange}
-              />
-              {errors.Cpassword && <h3>{errors.Cpassword}</h3>}
-            </div>
-            <div className={style.loginForm__inputDiv}>
-              <label>Your full name</label>
-              <input
-                type="text"
-                name="name"
-                defaultValue={name}
-                onChange={handleChange}
-              />
-              {errors.name && <h3>{errors.name}</h3>}
-            </div>
-            <div className={style.loginForm__inputDiv}>
-              <label>Your phone number</label>
-              <input
-                type="text"
-                name="phNumber"
-                defaultValue={phNumber}
-                onChange={handleChange}
-              />
-              {errors.phNumber && <h3>{errors.phNumber}</h3>}
-            </div>
-            <div className={style.loginForm__checkboxDiv}>
-              <input type="checkbox" id="checked" name="checkbox" required />
-              <label for="terms">I read and agree Terms and Conditions</label>
-            </div>
-            <button>create account</button>
-          </form>
-        </div>
+        <h1>Create an account</h1>
+        <form
+          className={style.box2__loginForm}
+          onSubmit={handleSubmit}
+          autoComplete="off"
+        >
+          <div className={style.loginForm__inputDiv}>
+            <label>Your email address</label>
+            <input
+              type="text"
+              name="email"
+              defaultValue={email}
+              onChange={handleChange}
+            />
+            {errors.email && <h3>{errors.email}</h3>}
+          </div>
+          <div className={style.loginForm__inputDiv}>
+            <label>Your Password</label>
+            <input
+              type="password"
+              name="password"
+              defaultValue={password}
+              onChange={handleChange}
+            />
+            {errors.password && <h3>{errors.password}</h3>}
+          </div>
+          <div className={style.loginForm__inputDiv}>
+            <label>Confirm Your Password</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              defaultValue={confirmPassword}
+              onChange={handleChange}
+            />
+            {errors.Cpassword && <h3>{errors.Cpassword}</h3>}
+          </div>
+          <div className={style.loginForm__inputDiv}>
+            <label>Your full name</label>
+            <input
+              type="text"
+              name="name"
+              defaultValue={name}
+              onChange={handleChange}
+            />
+            {errors.name && <h3>{errors.name}</h3>}
+          </div>
+          <div className={style.loginForm__inputDiv}>
+            <label>Your phone number</label>
+            <input
+              type="text"
+              name="phNumber"
+              defaultValue={phNumber}
+              onChange={handleChange}
+            />
+            {errors.phNumber && <h3>{errors.phNumber}</h3>}
+          </div>
+          <div className={style.loginForm__checkboxDiv}>
+            <input type="checkbox" id="checked" name="checkbox" required />
+            <label for="terms">I read and agree Terms and Conditions</label>
+          </div>
+          <button>create account</button>
+        </form>
       </div>
     </div>
   );

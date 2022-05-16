@@ -9,9 +9,11 @@ html {
 }
 
 .container {
-  max-width: 1460px;
-  height: 100vh;
+  min-width: 390px;
+  min-height: 100vh;
   padding: 1.5rem;
-  margin: 0 auto;
+  // margin: 0 auto;
   background-color: #dfdfdf;
+  display: flex;
+  flex-direction: column;
 }

@@ -5,30 +5,34 @@
 @import "./config/colors";
 
 .container {
-  height: 100%;
-  width: 100%;
+  max-width: 1440px;
+  flex-grow: 1;
   border-radius: 0.5rem;
   display: flex;
   gap: 0.5rem;
-  justify-content: space-between;
-
+  @include mixin.tablet-up {
+    margin: auto;
+  }
   &__box1 {
-    flex: 1 1 50rem;
+    flex: 1 1 100%;
     background-color: $light-grey;
     @include mixin.flex(column);
+    display: none;
     padding: 10rem;
+    @include mixin.tablet-up {
+      display: block;
+      min-height: 100%;
+      border-radius: 1rem 0 0 1rem;
+      @include mixin.flex(column);
+    }
     .box1__imgDiv {
-      width: auto;
-      height: auto;
-
       & img {
         object-fit: contain;
         max-width: 100%;
-        max-height: 100%;
       }
     }
     .box1__infoDiv {
-      width: 25rem;
+      max-width: 25rem;
       @include mixin.flex(column);
       & h3 {
         text-align: center;
@@ -47,32 +51,57 @@
     }
   }
   .container__box2 {
-    flex: 1 1 50rem;
-    padding: 50px 10px 50px 60px;
+    flex: 1 1 100%;
+    min-height: 100%;
     background-color: white;
-    padding: 6rem;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+    @include mixin.flex(column);
+    @include mixin.tablet-up {
+      justify-content: start;
+      align-items: start;
+      padding: 6rem;
+      border-radius: 0 1rem 1rem 0;
+    }
+
+    & h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: $font-primary;
+      @include mixin.tablet-up {
+        font-size: 2rem;
+      }
+    }
     .box2__loginForm {
       width: 100%;
-      height: 100%;
-      & h1 {
-        margin-bottom: 3rem;
-        color: $font-primary;
+      @include mixin.flex(column);
+      @include mixin.tablet-up {
+        align-items: start;
       }
       .loginForm__inputDiv {
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        @include mixin.flex(column);
         margin-bottom: 1.5rem;
+        @include mixin.tablet-up {
+          align-items: start;
+        }
         & label {
-          text-align: left;
           display: block;
           color: #434343;
-          font-size: 1.2rem;
-          font-weight: 600;
+          font-size: 1.5rem;
+          font-weight: 500;
           margin-bottom: 1rem;
+          @include mixin.tablet-up {
+            font-size: 1.2rem;
+            font-weight: 500;
+          }
         }
         & input {
           width: 80%;
+          max-width: 40rem;
+          text-align: center;
           min-width: 30rem;
           padding: 10px;
           border: 1px solid #818181;
@@ -123,15 +152,9 @@
   }
 }
 
-@media only screen and (max-width: 900px) {
-  .container__box1 {
-    display: none;
-  }
-}
-
 .dash_container {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: auto;
   background-color: #2f4a6d;
   display: flex;
