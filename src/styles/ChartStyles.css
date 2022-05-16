@@ -66,3 +66,8 @@ text.source {
   align-items: center;
   justify-content: center;
 }
+
+#d3demo {
+  width: 100vw;
+  height: 50vh;
+}
